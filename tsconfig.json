@@ -18,7 +18,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "types": ["@emotion/core", "jest"]
+    "types": ["@emotion/core", "jest"],
+    "baseUrl": "./src",
+    "paths": {
+      "@Components/*": ["components/*"]
+    }
   },
   "include": [
     "src"
