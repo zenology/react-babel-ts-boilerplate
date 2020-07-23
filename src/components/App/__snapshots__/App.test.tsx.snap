@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Should render properly 1`] = `
+.emotion-0 {
+  color: red;
+}
+
+<div>
+  <h1>
+    Hello World! 
+    <span
+      class="emotion-0"
+    >
+      Nom Nom Nom
+    </span>
+  </h1>
+</div>
+`;

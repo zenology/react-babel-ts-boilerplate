@@ -1,0 +1,51 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": ["prettier", "@typescript-eslint", "react-hooks"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "tsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+    }
+  },
+  "env": {
+    "es6": true,
+    "es2020": true,
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "tabWidth": 2,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "semi": false,
+        "useTabs": false,
+        "parser": "babel-ts",
+        "arrowParens": "always"
+      }
+    ],
+    "eqeqeq": ["error", "always"],
+    "space-before-function-paren": 0,
+    "generator-star-spacing": 0,
+    "react/prop-types": 0
+  }
+}
