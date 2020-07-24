@@ -65,9 +65,11 @@
     "webpack-dev-server": "^3.11.0"
   },
   "jest": {
+    "verbose": true,
     "roots": [
       "src"
     ],
+    "setupFilesAfterEnv": ["./config/jest.setup.js"],
     "snapshotSerializers": [
       "jest-emotion"
     ]
