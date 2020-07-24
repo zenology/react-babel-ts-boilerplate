@@ -2,6 +2,7 @@
 
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CircularDependencyPlugin = require('circular-dependency-plugin')
 
 module.exports = {
   // webpack will take the files from ./src/index
@@ -39,6 +40,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+    }),
+    new CircularDependencyPlugin({
+      exclude: /node_modules/,
+      include: /src/,
+      failOnError: true,
+      cwd: process.cwd(),
     }),
   ],
 }
